@@ -49,8 +49,18 @@ def recommend_movies(movie_name, movies_data, similarity):
     return recommended_movies
 
 # Streamlit UI
-st.title("🎬 Movie Recommendation System")
-st.write("Discover movies similar to your favorites!")
+# st.title("🎬 Movie Recommendation System")
+# st.write("Discover movies similar to your favorites!")
+
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <h1 style="font-size: 3em;">🎬 Fylm Finder</h1>
+        <h3 style="color: #888;">Because Great Movies Deserve to Be Found.</h3>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # Input and button
 movie_name = st.text_input("Enter a movie name:", "")

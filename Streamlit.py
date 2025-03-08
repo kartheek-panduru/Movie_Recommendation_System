@@ -10,7 +10,8 @@ st.set_page_config(page_title="Movie Recommendation System", layout="centered")
 # Load data
 @st.cache_data
 def load_data():
-    return pd.read_csv('D:/python/Movie Recommendation System using ML/movies.csv')
+    # return pd.read_csv('D:/python/Movie Recommendation System using ML/movies.csv')
+    return pd.read_csv('movies.csv')
 
 movies_data = load_data()
 

@@ -3,6 +3,7 @@ import pandas as pd
 import difflib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from pathlib import Path
 
 # Set page config (must be first)
 st.set_page_config(page_title="Movie Recommendation System", layout="centered")
@@ -10,8 +11,9 @@ st.set_page_config(page_title="Movie Recommendation System", layout="centered")
 # Load data
 @st.cache_data
 def load_data():
+    path = Path(__file__).parents[0] / 'movies.csv'
     # return pd.read_csv('D:/python/Movie Recommendation System using ML/movies.csv')
-    return pd.read_csv('movies.csv')
+    return pd.read_csv(path)
 
 movies_data = load_data()
 
